@@ -75,12 +75,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('//', index);
 
-app.get('/upload', (req, res) => {
+app.get('//upload', (req, res) => {
   res.redirect('/');
 });
 
-app.post('/upload', function(req, res) {
+app.post('//upload', function(req, res) {
   const file = req.files.tombosCsv;
   checkTomboCSV(res, file);
 });
