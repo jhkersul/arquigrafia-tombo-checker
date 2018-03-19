@@ -39,6 +39,11 @@ function checkTomboCSV(res, file) {
       if (error) throw error;
       console.log('SOLUTION', results);
 
+      // No result
+      if (results.length === 0) {
+        res.send('Nenhum tombo encontrado no site');
+      }
+
       // Mounting the json with the results
       const jsonResult = results.map(result => ({
         id: result.id,
