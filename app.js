@@ -42,6 +42,7 @@ function checkTomboCSV(res, file) {
       // No result
       if (results.length === 0) {
         res.send('Nenhum tombo encontrado no site');
+        return;
       }
 
       // Mounting the json with the results
