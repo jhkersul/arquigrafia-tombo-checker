@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  form(
+    ref='uploadForm'
+    action='/upload'
+    method='post'
+    encType='multipart/form-data'
+  )
+    input(
+      type='file'
+      name='tombosCsv'
+    )
+    input(
+      type='submit'
+      value='Enviar'
+    )
