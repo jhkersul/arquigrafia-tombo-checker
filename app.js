@@ -76,11 +76,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 
-app.get('/tombo-checker/upload', (req, res) => {
+app.get('/upload', (req, res) => {
   res.redirect('/');
 });
 
-app.post('/tombo-checker/upload', function(req, res) {
+app.post('/upload', function(req, res) {
   const file = req.files.tombosCsv;
   checkTomboCSV(res, file);
 });
